@@ -10,7 +10,7 @@ pipeline {
         stage('docker') {
             steps {
                 script {
-                   withDockerRegistry(credentialsId: 'docker-cred') {
+                  withDockerRegistry(credentialsId: 'tom-cred') {
                          sh 'docker build -t ramchandramazzari/candystore .'
                          sh 'docker push ramchandramazzari/candystore'
                    }
